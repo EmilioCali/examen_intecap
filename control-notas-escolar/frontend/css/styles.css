@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    min-height: 100vh;
+}
+
+.vista {
+    min-height: 100vh;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* ---------- Login ---------- */
+#vista-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+}
+
+.login-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: #1a252f;
+}
+
+.subtitulo {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+}
+
+.campo label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.campo input {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #d0d5da;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: #2980b9;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #21618c;
+}
+
+.mensaje-error {
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* ---------- Topbar ---------- */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a252f;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.topbar h2 {
+    font-size: 1.2rem;
+}
+
+.topbar-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 1px solid #7f8c8d;
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    width: auto;
+}
+
+.btn-secundario:hover {
+    background: #2c3e50;
+}
+
+/* ---------- Tabs ---------- */
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 2rem 0;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #7f8c8d;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    width: auto;
+}
+
+.tab-btn.activo {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
+}
+
+.tab-panel.oculto {
+    display: none;
+}
+
+/* ---------- Contenido general ---------- */
+.contenido {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.panel-header h3 {
+    font-size: 1.3rem;
+}
+
+.btn-primario {
+    width: auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* ---------- Grid de tarjetas ---------- */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.tarjeta-estudiante {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ecf0f1;
+}
+
+.tarjeta-estudiante h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.tarjeta-estudiante .carnet {
+    color: #7f8c8d;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta-estudiante .acciones {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.tarjeta-estudiante .acciones button {
+    flex: 1;
+    padding: 0.45rem;
+    font-size: 0.8rem;
+    width: auto;
+}
+
+.btn-editar {
+    background-color: #f39c12;
+}
+
+.btn-editar:hover {
+    background-color: #d68910;
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+.mensaje-vacio {
+    color: #95a5a6;
+    font-style: italic;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-box {
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 420px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.modal-header h3 {
+    font-size: 1.15rem;
+}
+
+.btn-cerrar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #7f8c8d;
+    width: auto;
+    padding: 0;
+}
+
+.btn-cerrar:hover {
+    color: #2c3e50;
+}
+
+.mensaje-form-error {
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-curso .profesor-asignado {
+    color: #2980b9;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.tarjeta-profesor .usuario-profesor {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.nombre-clickeable {
+    cursor: pointer;
+    color: #1a252f;
+    transition: color 0.15s;
+}
+
+.nombre-clickeable:hover {
+    color: #2980b9;
+}
+
+/* ---------- Detalle de estudiante ---------- */
+.modal-box.modal-ancho {
+    max-width: 560px;
+}
+
+.curso-inscrito {
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.curso-inscrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.curso-inscrito-header h5 {
+    font-size: 0.95rem;
+}
+
+.btn-eliminar-inscripcion {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 0.8rem;
+    cursor: pointer;
+    width: auto;
+    padding: 0.2rem 0.5rem;
+}
+
+.btn-eliminar-inscripcion:hover {
+    text-decoration: underline;
+}
+
+.notas-fila {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.nota-campo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nota-campo label {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    white-space: nowrap;
+}
+
+.nota-campo input {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid #d0d5da;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.nota-campo button {
+    width: auto;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+}
+
+.bloque-inscribir {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.bloque-inscribir-fila {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.bloque-inscribir-fila select {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #d0d5da;
+    border-radius: 6px;
+}
+
+.bloque-inscribir-fila button {
+    width: auto;
+    padding: 0.6rem 1rem;
+}
+
+.limite-alcanzado {
+    color: #e67e22;
+    font-size: 0.85rem;
+    font-style: italic;
+}
